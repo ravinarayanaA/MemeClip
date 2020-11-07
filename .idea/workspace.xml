@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3775dd78-ad71-4236-bb67-05a832844c9f" name="Default Changelist" comment="" />
+    <list id="4c0de73d-f11c-4c4e-abe5-1f13e6f17cc0" name="Revert &quot;initial commit&quot;-2" comment="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 80ae25aa">
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/1off.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/2001.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/444.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/AirhornFrenzy.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/GotHeem.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/MovesAreWeak.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/NoLuke.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/Unique.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/algorithms.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/america.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/angel.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/anotherone.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/avatar.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/baconpancakes.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/beach.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/beatmymeat.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/because.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/bigtruck.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/bingbong.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/bjork.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/blbl.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/blue.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/buyer.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/chaosemeralds.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/cow.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dab.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dancinglobsters.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/democracy.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dickandballs.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/disappointed.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/disturbing.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dogofwisdom.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dusty.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/ecuador.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/everagain.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/faces.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/familiar.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/fuckthis.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/future3.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/gay.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/george.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/goat.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/gunbuster.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/hahGay.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/hello5.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/homeimprovement.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/horn.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/hugepenis.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/humanmusic.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/idgaf.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/isis.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/iwannalive.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/killurself.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/lisaneedsbraces.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/magnumdong2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/mingming.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/neversurrender.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/nightman.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/ohgod.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/omg.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/onlyone.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pie.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pizza2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pizzahut.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/plagueis.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pleaseclap.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/potato2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/quickly.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/read.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/rick2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/roadwork.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/round2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/sausagemushroompizza.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/scary.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/scotland.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/shuckyducky.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/slam.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/smart.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/smokeweed.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/sob2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/spielberg.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/spoon.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/thanksnoobnoob.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/timeToStop.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/trap.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/trombone.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/waffles.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/water.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/whererurparents.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/whitepants.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/whoopin.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/wrongnumber.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/yankee.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/yes2.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/youeatmyspaghett.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/yourking.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/zoolander.opus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/018e64c5-2e2d-449b-8b7e-e8c6edc100c2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/036509c7-44be-4751-a5e5-c376ebf297d6.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/06ab6169-0b79-49c4-bfdc-0b9c62e1d740.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/0762c5c4-907e-4fac-9261-afb720824504.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/0ac041e7-6c3f-4416-aaa2-8a31579b1a30.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/10b0ca77-11e7-447c-9fea-36a81dabb88a.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/126e1322-b071-42eb-9cbc-a54f75020357.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/159a0d87-9d09-495e-9568-47ad1da8bf3d.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/169009d7-5d3d-46ac-af85-f2434fd64742.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/16983ebd-5078-4623-a5c6-cd245cbecf72.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/1ba3297e-d21e-466d-b368-d0d95931a97a.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/2063e265-125a-4351-8117-d1ba74bc504f.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/2166b433-d4de-44c4-8342-380a411dfd39.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/22c0953c-eaf2-490e-9cb0-46e799282d36.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/23746557-6e5d-4f87-8207-cc487b860972.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/25031ce3-6051-48d0-bfe0-f35ef3ff0fe9.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/259480b2-bd4e-4835-b362-d7a009c0260c.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/2e1e93fb-f9d1-44a3-b92b-8556c7e19df3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/332ec580-1e60-4b53-aeeb-c4b26b2eb8af.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/3d2a62b5-54e4-48fb-833a-fe0f7b9c1c02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/4763698d-93f7-474d-b613-11bde2909431.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/517fd7b7-2c37-4495-81d9-f3e9617faee4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/5a367945-43d0-4058-ade5-e89cb6ff93fb.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/60d0f051-5d74-4c93-b7cb-e79bd96e26fd.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/63c43d55-bcd1-438a-a011-2e1f38db7027.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/65d632e7-c7a9-4b62-b149-e35f212b7dc1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/66530719-089c-4a36-84ba-5c91cbbbe251.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/6dfb2546-0df7-4e56-9693-50b0a75af69a.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/73654127-7802-412c-9f7b-2f6d14887e51.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/769e6dd6-1f9d-4ef4-be40-9cab7929862e.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/76dd697c-c6e2-4118-9a78-92913974d054.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/77d77d0a-86a7-4780-ba56-c89d104ddd5e.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/77d980d9-57b6-4fa8-8a05-bc798055f124.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/78088cdf-2937-47dd-a72d-154754217c38.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/87984adb-7a8c-4af1-98e0-6600277371b0.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/8802873b-8362-4cb0-be04-3e52eafa7871.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/88ab3240-f82e-479f-af0d-63b81661cf46.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/8b94bdec-6c91-4141-bf85-0ee44b0c7319.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/8dbf3700-97f0-4ca9-8852-a0ca798727f3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/92711110-6566-405f-9ca1-cba66047062f.m4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/98b2220a-8b0b-4539-af31-e1f000742989.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/99ec91c8-df4d-481b-90f2-e8343795dbf7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/99fa3a9f-4657-4703-9165-e8c6e5bb1f1e.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/9e6fa0a7-8b03-462c-813b-a5fe531f26e0.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/9f7fe18c-7f44-4911-8c2a-c7c78eb6aaba.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/a75ab558-42d2-42a1-99a1-4309dd9cbfdb.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/a8361c60-a24f-4e10-9b34-e7d67dd627ff.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/aae9be4e-f178-45e7-bf54-e261d11d93c5.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/abf7b500-cb6e-4c34-8661-9e60dd6512b9.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/b9a253fc-a254-46ee-bb1b-52e7562c08a1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/bd413b11-db89-4a57-8f88-cf98f9cf3cd3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/be47cdc7-c40c-4f01-9b29-80751cf4207b.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/bf8e66ab-44fe-4650-82eb-34260c254fca.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/c4cee76e-b879-4fd3-8f03-45881177f0cf.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/c5a6947b-9fd5-40f7-876a-61f6c9ccba62.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/cb563cfe-471b-4138-82b6-061bee79298c.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/d5872bbc-e714-4831-b778-3010237ded09.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/d89983d7-da2f-4345-ac0c-7b5f120ff6d4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/db6fd0af-fbb2-44c0-b802-01e471ed640d.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/fafafd38-cf41-4f0c-a5ad-e958cf85e827.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_to_caption/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_to_caption/create_input_files.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_to_caption/datasets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_to_caption/img/bikefence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_to_caption/img/birds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_to_caption/img/sorted2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/CSCI566_project_meme_templates_clean.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="43e39183-940b-4bb8-8b33-a62c0fefa8e6" />
+  <component name="ProjectId" id="1jhjeELM5V6s4COhKYP1yQJq6EH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Class Documents\DL\project\notebooks" />
+      <recent name="C:\Class Documents\DL\project" />
+      <recent name="C:\Class Documents\DL\project\oscar\oscar" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.voicy_data (1)">
+    <configuration name="caption" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image_to_caption" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image_to_caption/caption.py" />
+      <option name="PARAMETERS" value="--dir_path=./Test_Images/ --model=./weights/BEST_checkpoint_coco_5_cap_per_img_5_min_word_freq.pth.tar --word_map=./weights/WORDMAP_coco_5_cap_per_img_5_min_word_freq.json --beam_size=5" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="memelife" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/audio_data_downloader" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audio_data_downloader/memelife.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/oscar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/oscar/predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="voicy_data (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/audio_data_downloader/voicy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audio_data_downloader/voicy/voicy_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="voicy_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/audio_data_downloader" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audio_data_downloader/voicy_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.caption" />
+      <item itemvalue="Python.predict" />
+      <item itemvalue="Python.voicy_data" />
+      <item itemvalue="Python.memelife" />
+      <item itemvalue="Python.voicy_data (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.voicy_data (1)" />
+        <item itemvalue="Python.memelife" />
+        <item itemvalue="Python.voicy_data" />
+        <item itemvalue="Python.caption" />
+        <item itemvalue="Python.predict" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3775dd78-ad71-4236-bb67-05a832844c9f" name="Default Changelist" comment="" />
+      <created>1604263311455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604263311455</updated>
+      <workItem from="1604263312637" duration="9547000" />
+      <workItem from="1604546565135" duration="7581000" />
+      <workItem from="1604714607355" duration="15235000" />
+      <workItem from="1604781457518" duration="2320000" />
+    </task>
+    <task id="LOCAL-00001" summary="Changed img to dir and print only captions">
+      <created>1604553209863</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604553209863</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding sample images">
+      <created>1604553398516</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604553398516</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 15201575">
+      <created>1604783347916</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604783347916</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/image_to_caption" />
+    </ignored-roots>
+    <MESSAGE value="Changed img to dir and print only captions" />
+    <MESSAGE value="Adding sample images" />
+    <MESSAGE value="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 15201575" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 15201575" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604552643092">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604552643092" />
+    <state x="716" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604264816656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="716" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604264816656" />
+    <state x="581" y="445" width="878" height="595" key="#xdebugger.evaluate" timestamp="1604730343129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="445" width="878" height="595" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1604730343129" />
+    <state x="585" y="84" key="CommitChangelistDialog2" timestamp="1604783359737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604783359737" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1604783639825">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604783639825" />
+    <state x="838" y="417" width="483" height="205" key="Github.ShareDialog" timestamp="1604781880924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="417" width="483" height="205" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604781880924" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1604781431830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431830" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1604781431830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431830" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1604781431829">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431829" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1604781431830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431830" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1604781431832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431832" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1604781431831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431831" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1604781431830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431830" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1604781431832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604781431832" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604334656282" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1604783589416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604783589416" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1604553560929">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604553560929" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1604717556240">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1604717556240" />
+    <state x="428" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604268327997">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="428" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604268327997" />
+    <state x="666" y="253" width="587" height="592" key="find.popup" timestamp="1604268632428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="253" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604268632428" />
+    <state x="731" y="414" key="git4idea.ui.GitResetDialog" timestamp="1604781378951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="414" key="git4idea.ui.GitResetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604781378951" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/oscar/predict.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/image_to_caption/caption.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/project$memelife.coverage" NAME="memelife Coverage Results" MODIFIED="1604718072146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audio_data_downloader" />
+    <SUITE FILE_PATH="coverage/project$voicy_data.coverage" NAME="voicy_data Coverage Results" MODIFIED="1604715023508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audio_data_downloader" />
+    <SUITE FILE_PATH="coverage/project$caption.coverage" NAME="caption Coverage Results" MODIFIED="1604553109959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/image_to_caption" />
+    <SUITE FILE_PATH="coverage/project$predict.coverage" NAME="predict Coverage Results" MODIFIED="1604268087913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/oscar" />
+    <SUITE FILE_PATH="coverage/project$voicy_data__1_.coverage" NAME="voicy_data (1) Coverage Results" MODIFIED="1604727671762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audio_data_downloader/voicy" />
+    <SUITE FILE_PATH="coverage/project$modeling_bert.coverage" NAME="modeling_bert Coverage Results" MODIFIED="1604266161986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/oscar/oscar/modeling" />
+  </component>
+</project>
