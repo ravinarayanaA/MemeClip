@@ -16,7 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3775dd78-ad71-4236-bb67-05a832844c9f" name="Default Changelist" comment="" />
+    <list default="true" id="3775dd78-ad71-4236-bb67-05a832844c9f" name="Default Changelist" comment="Meme to Audio mapper">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/find_audio/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/find_audio/readme.md" afterDir="false" />
+    </list>
     <list id="4c0de73d-f11c-4c4e-abe5-1f13e6f17cc0" name="Revert &quot;initial commit&quot;-2" comment="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 80ae25aa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +68,9 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Class Documents\DL\project\notebooks" />
       <recent name="C:\Class Documents\DL\project" />
@@ -236,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604783347916</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Meme to Audio mapper">
+      <created>1604798433496</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604798433496</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +286,8 @@
     <MESSAGE value="Changed img to dir and print only captions" />
     <MESSAGE value="Adding sample images" />
     <MESSAGE value="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 15201575" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 15201575" />
+    <MESSAGE value="Meme to Audio mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meme to Audio mapper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604552643092">
@@ -344,10 +358,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604783589416" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1604553560929">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="515" y="255" key="Vcs.Push.Dialog.v2" timestamp="1604798445565">
+      <screen x="0" y="23" width="1792" height="1011" />
     </state>
     <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604553560929" />
+    <state x="515" y="255" key="Vcs.Push.Dialog.v2/0.23.1792.1011@0.23.1792.1011" timestamp="1604798445565" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1604717556240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
