@@ -1,0 +1,1 @@
+python find_audio.py -model model/roberta-base-nli-mean-tokens -model_type sentence_bert -embeddings files/ -query "laughing man."

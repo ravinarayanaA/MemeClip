@@ -17,174 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3775dd78-ad71-4236-bb67-05a832844c9f" name="Default Changelist" comment="" />
-    <list id="4c0de73d-f11c-4c4e-abe5-1f13e6f17cc0" name="Revert &quot;initial commit&quot;-2" comment="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 80ae25aa">
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/1off.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/2001.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/444.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/AirhornFrenzy.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/GotHeem.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/MovesAreWeak.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/NoLuke.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/Unique.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/algorithms.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/america.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/angel.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/anotherone.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/avatar.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/baconpancakes.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/beach.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/beatmymeat.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/because.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/bigtruck.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/bingbong.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/bjork.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/blbl.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/blue.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/buyer.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/chaosemeralds.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/cow.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dab.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dancinglobsters.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/democracy.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dickandballs.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/disappointed.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/disturbing.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dogofwisdom.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/dusty.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/ecuador.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/everagain.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/faces.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/familiar.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/fuckthis.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/future3.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/gay.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/george.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/goat.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/gunbuster.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/hahGay.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/hello5.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/homeimprovement.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/horn.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/hugepenis.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/humanmusic.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/idgaf.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/isis.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/iwannalive.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/killurself.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/lisaneedsbraces.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/magnumdong2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/mingming.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/neversurrender.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/nightman.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/ohgod.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/omg.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/onlyone.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pie.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pizza2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pizzahut.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/plagueis.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/pleaseclap.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/potato2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/quickly.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/read.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/rick2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/roadwork.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/round2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/sausagemushroompizza.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/scary.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/scotland.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/shuckyducky.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/slam.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/smart.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/smokeweed.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/sob2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/spielberg.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/spoon.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/thanksnoobnoob.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/timeToStop.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/trap.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/trombone.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/waffles.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/water.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/whererurparents.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/whitepants.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/whoopin.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/wrongnumber.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/yankee.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/yes2.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/youeatmyspaghett.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/yourking.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/memlife/dataset/zoolander.opus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/018e64c5-2e2d-449b-8b7e-e8c6edc100c2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/036509c7-44be-4751-a5e5-c376ebf297d6.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/06ab6169-0b79-49c4-bfdc-0b9c62e1d740.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/0762c5c4-907e-4fac-9261-afb720824504.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/0ac041e7-6c3f-4416-aaa2-8a31579b1a30.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/10b0ca77-11e7-447c-9fea-36a81dabb88a.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/126e1322-b071-42eb-9cbc-a54f75020357.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/159a0d87-9d09-495e-9568-47ad1da8bf3d.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/169009d7-5d3d-46ac-af85-f2434fd64742.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/16983ebd-5078-4623-a5c6-cd245cbecf72.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/1ba3297e-d21e-466d-b368-d0d95931a97a.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/2063e265-125a-4351-8117-d1ba74bc504f.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/2166b433-d4de-44c4-8342-380a411dfd39.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/22c0953c-eaf2-490e-9cb0-46e799282d36.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/23746557-6e5d-4f87-8207-cc487b860972.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/25031ce3-6051-48d0-bfe0-f35ef3ff0fe9.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/259480b2-bd4e-4835-b362-d7a009c0260c.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/2e1e93fb-f9d1-44a3-b92b-8556c7e19df3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/332ec580-1e60-4b53-aeeb-c4b26b2eb8af.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/3d2a62b5-54e4-48fb-833a-fe0f7b9c1c02.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/4763698d-93f7-474d-b613-11bde2909431.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/517fd7b7-2c37-4495-81d9-f3e9617faee4.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/5a367945-43d0-4058-ade5-e89cb6ff93fb.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/60d0f051-5d74-4c93-b7cb-e79bd96e26fd.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/63c43d55-bcd1-438a-a011-2e1f38db7027.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/65d632e7-c7a9-4b62-b149-e35f212b7dc1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/66530719-089c-4a36-84ba-5c91cbbbe251.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/6dfb2546-0df7-4e56-9693-50b0a75af69a.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/73654127-7802-412c-9f7b-2f6d14887e51.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/769e6dd6-1f9d-4ef4-be40-9cab7929862e.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/76dd697c-c6e2-4118-9a78-92913974d054.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/77d77d0a-86a7-4780-ba56-c89d104ddd5e.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/77d980d9-57b6-4fa8-8a05-bc798055f124.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/78088cdf-2937-47dd-a72d-154754217c38.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/87984adb-7a8c-4af1-98e0-6600277371b0.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/8802873b-8362-4cb0-be04-3e52eafa7871.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/88ab3240-f82e-479f-af0d-63b81661cf46.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/8b94bdec-6c91-4141-bf85-0ee44b0c7319.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/8dbf3700-97f0-4ca9-8852-a0ca798727f3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/92711110-6566-405f-9ca1-cba66047062f.m4a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/98b2220a-8b0b-4539-af31-e1f000742989.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/99ec91c8-df4d-481b-90f2-e8343795dbf7.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/99fa3a9f-4657-4703-9165-e8c6e5bb1f1e.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/9e6fa0a7-8b03-462c-813b-a5fe531f26e0.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/9f7fe18c-7f44-4911-8c2a-c7c78eb6aaba.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/a75ab558-42d2-42a1-99a1-4309dd9cbfdb.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/a8361c60-a24f-4e10-9b34-e7d67dd627ff.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/aae9be4e-f178-45e7-bf54-e261d11d93c5.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/abf7b500-cb6e-4c34-8661-9e60dd6512b9.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/b9a253fc-a254-46ee-bb1b-52e7562c08a1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/bd413b11-db89-4a57-8f88-cf98f9cf3cd3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/be47cdc7-c40c-4f01-9b29-80751cf4207b.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/bf8e66ab-44fe-4650-82eb-34260c254fca.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/c4cee76e-b879-4fd3-8f03-45881177f0cf.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/c5a6947b-9fd5-40f7-876a-61f6c9ccba62.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/cb563cfe-471b-4138-82b6-061bee79298c.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/d5872bbc-e714-4831-b778-3010237ded09.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/d89983d7-da2f-4345-ac0c-7b5f120ff6d4.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/db6fd0af-fbb2-44c0-b802-01e471ed640d.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_data_downloader/voicy/dataset/fafafd38-cf41-4f0c-a5ad-e958cf85e827.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_to_caption/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_to_caption/create_input_files.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_to_caption/datasets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_to_caption/img/bikefence.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_to_caption/img/birds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_to_caption/img/sorted2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/CSCI566_project_meme_templates_clean.ipynb" beforeDir="false" />
-    </list>
+    <list id="4c0de73d-f11c-4c4e-abe5-1f13e6f17cc0" name="Revert &quot;initial commit&quot;-2" comment="Revert &quot;initial commit&quot;&#10;&#10;This reverts commit 80ae25aa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -365,7 +199,10 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3775dd78-ad71-4236-bb67-05a832844c9f" name="Default Changelist" comment="" />
