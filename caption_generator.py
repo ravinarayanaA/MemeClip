@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
+# -*- coding: utf-8 -*-
 
 #@markdown Utility function (run on each Runtime restart)
 
@@ -10,18 +6,12 @@ from IPython.display import clear_output
 import os
 import sys
 
-def download_from_gdrive(gdrive_id, filename):
-    get_ipython().system('wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate \'https://docs.google.com/uc?export=download&id=\'$gdrive_id -O- | sed -rn \'s/.*confirm=([0-9A-Za-z_]+).*/\\1\\n/p\')&id="$gdrive_id -O $filename && rm -rf /tmp/cookies.txt')
 
 import torch
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print('DEVICE:', DEVICE)
 
-
-# # 1. Data preparation
-
-# In[ ]:
-
+"""# 1. Data preparation"""
 
 #@markdown Load and process the file with data and checkpoints Google Drive IDs
 
@@ -38,10 +28,6 @@ with open(FILE_IDS_NAME, 'r') as f:
 
 clear_output()
 
-
-# In[ ]:
-
-
 #@title Load codebase
 
 LOAD_FROM_GITHUB = True #@param {type:"boolean"}
@@ -49,43 +35,32 @@ LOAD_FROM_GITHUB = True #@param {type:"boolean"}
 if LOAD_FROM_GITHUB:
     print('Loading code from GitHub')
     # will not work while repo is private
-    get_ipython().system('git clone https://github.com/mpiplani/CSCI-566-Project')
+    !git clone https://github.com/mpiplani/CSCI-566-Project
 else:
     # from Google Drive (the same code)
     print('Loading code from Google Drive')
     os.chdir('/content')
     fname = 'deephumor.zip'
     download_from_gdrive(FILE_IDS[fname], 'deephumor.zip')
-    get_ipython().system('unzip -o {fname}')
-    get_ipython().system('rm -rf __MACOSX/')
+    !unzip -o {fname}
+    !rm -rf __MACOSX/
 
 os.chdir('/content/CSCI-566-Project')
-get_ipython().system('pip install -r requirements.txt')
+!pip install -r requirements.txt
 clear_output()
 
 print(f'Loaded code from {"GitHub" if LOAD_FROM_GITHUB else "Google Drive"}')
 
-
-# In[ ]:
-
-
 os.chdir('/content')
 sys.path.append('/content/CSCI-566-Project')
 
+"""## 1.1. Data
 
-# ## 1.1. Data
-# 
-# Load the dataset from Google Drive:
-
-# In[ ]:
-
+Load the dataset from Google Drive:
+"""
 
 DATA_DIR = 'memes900k'
 CAPTIONS_FILE = os.path.join(DATA_DIR, 'captions_train.txt')
-
-
-# In[ ]:
-
 
 #@title Load dataset
 
@@ -93,23 +68,19 @@ CAPTIONS_FILE = os.path.join(DATA_DIR, 'captions_train.txt')
 print('Loading the dataset from Google Drive')
 fname = f'{DATA_DIR}.zip'
 download_from_gdrive(FILE_IDS[fname], fname)
-get_ipython().system('unzip -o {DATA_DIR}')
+!unzip -o {DATA_DIR}
 clear_output()
 
+"""## 1.2 Vocabulary
 
-# ## 1.2 Vocabulary
-# 
-# Before loading and testing the models it is necessary to build the token vocabularies used by the models.
-# 
-# Original vocavularies are built based on tokens the `captions_train.txt` file using `build_vocab_from_file` function. The function is deterministic and you will obtain the same vocabulary used during the experiments by setting `min_df=5`.
-# 
-# Vocabularies used by the models can also be loaded and built from Google Drive.
-# 
-# Set `LOAD_VOCABULARY = False` to built vocabularies from scratch. Overwise, the files will be loaded from Google Drive.
-# 
+Before loading and testing the models it is necessary to build the token vocabularies used by the models.
 
-# In[35]:
+Original vocavularies are built based on tokens the `captions_train.txt` file using `build_vocab_from_file` function. The function is deterministic and you will obtain the same vocabulary used during the experiments by setting `min_df=5`.
 
+Vocabularies used by the models can also be loaded and built from Google Drive.
+
+Set `LOAD_VOCABULARY = False` to built vocabularies from scratch. Overwise, the files will be loaded from Google Drive.
+"""
 
 """Vocabulary tools."""
 
@@ -198,10 +169,6 @@ def build_vocab_from_file(captions_file, tokenizer, min_df=7):
 
     return build_vocab(captions, tokenizer, min_df=min_df)
 
-
-# In[36]:
-
-
 """Text Tokenizers."""
 import abc
 import re
@@ -232,10 +199,6 @@ class CharTokenizer:
     def tokenize(self, text):
         return self.token_pattern.findall(text)
 
-
-# In[37]:
-
-
 #@title Word and Chararacter Vocab
 
 
@@ -250,7 +213,7 @@ if LOAD_VOCABULARY:
 
     fname = 'vocab.zip'
     download_from_gdrive(FILE_IDS[fname], fname)
-    get_ipython().system('unzip -o {fname}')
+    !unzip -o {fname}
 
     vocab_words = Vocab.load('vocab/vocab_words.txt')
     vocab_chars = Vocab.load('vocab/vocab_chars.txt')
@@ -269,17 +232,12 @@ print('\nVocabulary sizes:')
 print('WordVocab:', len(vocab_words))
 print('CharVocab:', len(vocab_chars))
 
+"""## 1.3 MemeDataset
 
-# ## 1.3 MemeDataset
-# 
-# Build Word- and Character-level `MemeDataset`s usign the defined vocabularies and tokenizers. 
-# 
-# Use `NUM_CLASSES` to limit the number of templates to load (max. is 300, for training the models only 200 were used).
-# 
-# 
+Build Word- and Character-level `MemeDataset`s usign the defined vocabularies and tokenizers. 
 
-# In[39]:
-
+Use `NUM_CLASSES` to limit the number of templates to load (max. is 300, for training the models only 200 were used).
+"""
 
 import os
 
@@ -311,10 +269,12 @@ class MemeDataset(Dataset):
     def _load_dataset(self):
         # load templates information
         fn_temp = os.path.join(self.root, 'templates.txt')
-        assert os.path.exists(fn_temp),             f'Templates file {fn_temp} is not found'
+        assert os.path.exists(fn_temp), \
+            f'Templates file {fn_temp} is not found'
 
         dir_imgs = os.path.join(self.root, 'images')
-        assert os.path.isdir(dir_imgs),             f'Images directory {dir_imgs} is not found'
+        assert os.path.isdir(dir_imgs), \
+            f'Images directory {dir_imgs} is not found'
 
         self.templates = {}
         self.images = {}
@@ -338,7 +298,8 @@ class MemeDataset(Dataset):
 
         # load captions
         fn_capt = os.path.join(self.root, f'captions_{self.split}.txt')
-        assert os.path.exists(fn_capt),             f'Captions file {fn_capt} is not found'
+        assert os.path.exists(fn_capt), \
+            f'Captions file {fn_capt} is not found'
 
         self.captions = []
         with open(fn_capt, 'r') as f:
@@ -381,16 +342,12 @@ class MemeDataset(Dataset):
     def __len__(self):
         return len(self.captions)
 
-
-# In[40]:
-
-
 #@title Build `MemeDataset`
 
 
 
 # use this to limit the dataset size (300 classes in total)
-NUM_CLASSES = 200 #@param {type:"slider", min:1, max:300, step:1}  
+NUM_CLASSES = 300 #@param {type:"slider", min:1, max:300, step:1}  
 PAD_IDX = vocab_words.stoi['<pad>']
 
 from torchvision import transforms
@@ -416,11 +373,18 @@ datasets_chars = {
     for split in splits
 }
 
+print(datasets_words['train'])
 
-# # 2. Models
+import json
+dataset_words_json = open("dataset_words_json.json", "w") 
+  
+json.dump(datasets_words, dataset_words_json) 
+  
+dataset_words_json.close()
 
-# In[43]:
 
+
+"""# 2. Models"""
 
 """Image and Text Encoder models."""
 import torch
@@ -553,10 +517,6 @@ class ImageLabelEncoder(nn.Module):
 
         return emb
 
-
-# In[44]:
-
-
 import torch
 
 
@@ -666,10 +626,6 @@ class BeamSearchHelper:
     def all_ended(self):
         """Returns bool indicating if all sequences have ended."""
         return torch.all(self.has_ended)
-
-
-# In[45]:
-
 
 """RNN-based models."""
 import torch
@@ -811,10 +767,6 @@ class LSTMDecoder(nn.Module):
         output_seq = sample_seq[ind, :].squeeze()
 
         return output_seq
-
-
-# In[46]:
-
 
 """Image captioning models."""
 import torch
@@ -1005,14 +957,6 @@ class CaptioningLSTMWithLabels(nn.Module):
         return model
 
 
-# In[ ]:
-
-
-
-
-
-# In[47]:
-
 
 #@markdown Model loading utilities
 
@@ -1040,15 +984,12 @@ FILE_TO_CLASS = {
     
 }
 
+"""IMPORTANT: if some cell in this section crashed, run it again, it should be fine
 
-# IMPORTANT: if some cell in this section crashed, run it again, it should be fine
+## 2.1. Word-based models
 
-# ## 2.1. Word-based models
-
-# ### 2.1.1. LSTM Decoder
-
-# In[48]:
-
+### 2.1.1. LSTM Decoder
+"""
 
 #@markdown Load and build `w_lstm_model`
 
@@ -1058,11 +999,7 @@ model_class = FILE_TO_CLASS[ckpt_path]
 
 w_lstm_model = load_and_build_model(gdrive_id, ckpt_path, model_class)
 
-
-# ### 2.1.2. LSTM Decoder with labels
-
-# In[49]:
-
+"""### 2.1.2. LSTM Decoder with labels"""
 
 #@markdown Load and build `w_lstm_model_labels`
 
@@ -1072,22 +1009,14 @@ model_class = FILE_TO_CLASS[ckpt_path]
 
 w_lstm_model_labels = load_and_build_model(gdrive_id, ckpt_path, model_class)
 
-
-# # 3. Meme Generation
-
-# In[50]:
-
+"""# 3. Meme Generation"""
 
 IMG_DIR = 'images_inference'
 
 fname = 'inference.zip'
 download_from_gdrive(FILE_IDS[fname], fname)
-get_ipython().system('unzip -o {fname}')
+!unzip -o {fname}
 clear_output()
-
-
-# In[51]:
-
 
 import re
 
@@ -1170,10 +1099,6 @@ def split_caption(text, num_blocks=None):
         text_blocks += [''] * (num_blocks - len(text_blocks))
 
     return text_blocks[:num_blocks]
-
-
-# In[52]:
-
 
 import numpy as np
 from PIL import ImageFont, ImageDraw
@@ -1379,10 +1304,6 @@ def caption_image(img, text_lines, font, pos='top'):
 
     return img
 
-
-# In[53]:
-
-
 #@title Meme generation and captioning function
 
 from PIL import Image
@@ -1431,37 +1352,26 @@ def get_a_meme(model, img_torch, img_pil, caption, T=1., beam_size=7, top_k=50,
 
     return memeify_image(img_pil, top, bottom, font_path=FONT_PATH)
 
+"""# GENERATE
 
-# In[ ]:
+You can either use images from the dataset or use images of your own (unseen during the traing). For the latter download your image to the Images_inference folder. It is also possible to take images from that folder. 
 
+One more option is to select the beginning of your future generated meme, and by doing so inserting some context into the model. To do so change `caption = None` to your sring.
 
+## Images from the dataset
 
-
-
-# # GENERATE
-
-# You can either use images from the dataset or use images of your own (unseen during the traing). For the latter download your image to the Images_inference folder. It is also possible to take images from that folder. 
-# 
-# One more option is to select the beginning of your future generated meme, and by doing so inserting some context into the model. To do so change `caption = None` to your sring.
-
-# ## Images from the dataset
-# 
-# In the cell below you can input the corresonding `label` of the template, the full list of templates is in memes900k/templates.txt. You can use labels only in models with that feature, namely `ch_lstm_model_labels`, `w_lstm_model_labels`. To do so, during generation in function `get_a_meme` write `labels=labels`.
-
-# In[84]:
-
+In the cell below you can input the corresonding `label` of the template, the full list of templates is in memes900k/templates.txt. You can use labels only in models with that feature, namely `ch_lstm_model_labels`, `w_lstm_model_labels`. To do so, during generation in function `get_a_meme` write `labels=labels`.
+"""
 
 # Image from dataset
-label = 'Awkward Seal' 
+label = 'Paranoid Parrot' 
 labels = torch.tensor(datasets_words['train']._preprocess_text(label)).unsqueeze(0).cuda()
 img_torch = datasets_words['train'].images[label]
 img_pil = Image.open(datasets_words['train'].templates[label])
 
 img_torch = img_torch.unsqueeze(0).cuda()
-caption = 'dog play toy toy'
+caption = 'a couple of women walking down a street'
 
-
-# In[90]:
 
 
 w_lstm_model.cuda()
@@ -1478,10 +1388,6 @@ get_a_meme(
     device='cuda'
 )
 
-
-# In[86]:
-
-
 w_lstm_model_labels.cuda()
 
 get_a_meme(
@@ -1496,41 +1402,16 @@ get_a_meme(
     device='cuda'
 )
 
-
-# In[82]:
-
-
-get_ipython().system('pip install nltk')
-
-
-# In[60]:
-
+import nltk
+!pip install nltk
 
 nltk.download('punkt')
-  
-
-
-# In[61]:
-
 
 nltk.download('averaged_perceptron_tagger')
 
-
-# In[62]:
-
-
 nltk.download('wordnet')
 
-
-# In[69]:
-
-
 nltk.download('stopwords')
-
-
-# In[88]:
-
-
 
 import nltk
 from nltk import word_tokenize, pos_tag
@@ -1541,7 +1422,7 @@ from IPython.display import display
 lemmatizer = nltk.WordNetLemmatizer()
 stop_words = set(stopwords.words('english')) 
 #word tokenizeing and part-of-speech tagger
-document = 'a dog is playing with a toy toy '
+document = 'a group of people sitting on a bench'
 tokens = nltk.word_tokenize(document)
 tokens = [w for w in tokens if not w in stop_words]
 postag = nltk.pos_tag(tokens)
@@ -1603,15 +1484,24 @@ for term in terms:
     features+=_term
 features.lstrip()
 
+!pip install ffmpeg-python
+!pip install ipywidgets==7.4
+!pip install --upgrade IPython
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
+import ffmpeg
 
 
+input_still = ffmpeg.input("meme.png")
+input_audio = ffmpeg.input("1off.opus")
+
+(
+    ffmpeg
+    .concat(input_still, input_audio, v=1, a=1)
+    .output("output.mp4")
+    .run(overwrite_output=True)
+)
 
 
+
+from IPython.display import Video
+Video('output.mp4', embed=True, html_attributes="controls autoplay")
