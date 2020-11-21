@@ -9,9 +9,13 @@ from models import Encoder, DecoderWithAttention
 from datasets import *
 from utils import *
 from nltk.translate.bleu_score import corpus_bleu
+import os
+import json
+from torch.utils import tensorboard
 
+writer = tensorboard.SummaryWriter('runs/caption_experiment_2')
 # Data parameters
-data_folder = '/media/ssd/caption data'  # folder with data files saved by create_input_files.py
+data_folder = 'C:\\Class Documents\\DL\\train'  # folder with data files saved by create_input_files.py
 data_name = 'coco_5_cap_per_img_5_min_word_freq'  # base name shared by data files
 
 # Model parameters
@@ -90,10 +94,10 @@ def main():
                                      std=[0.229, 0.224, 0.225])
     train_loader = torch.utils.data.DataLoader(
         CaptionDataset(data_folder, data_name, 'TRAIN', transform=transforms.Compose([normalize])),
-        batch_size=batch_size, shuffle=True, num_workers=workers, pin_memory=True)
-    val_loader = torch.utils.data.DataLoader(
-        CaptionDataset(data_folder, data_name, 'VAL', transform=transforms.Compose([normalize])),
-        batch_size=batch_size, shuffle=True, num_workers=workers, pin_memory=True)
+        batch_size=batch_size)
+    # val_loader = torch.utils.data.DataLoader(
+    #     CaptionDataset(data_folder, data_name, 'VAL', transform=transforms.Compose([normalize])),
+    #     batch_size=batch_size, shuffle=True, num_workers=workers, pin_memory=True)
 
     # Epochs
     for epoch in range(start_epoch, epochs):
@@ -116,23 +120,23 @@ def main():
               epoch=epoch)
 
         # One epoch's validation
-        recent_bleu4 = validate(val_loader=val_loader,
-                                encoder=encoder,
-                                decoder=decoder,
-                                criterion=criterion)
+        # recent_bleu4 = validate(val_loader=val_loader,
+        #                         encoder=encoder,
+        #                         decoder=decoder,
+        #                         criterion=criterion)
 
         # Check if there was an improvement
-        is_best = recent_bleu4 > best_bleu4
-        best_bleu4 = max(recent_bleu4, best_bleu4)
-        if not is_best:
-            epochs_since_improvement += 1
-            print("\nEpochs since last improvement: %d\n" % (epochs_since_improvement,))
-        else:
-            epochs_since_improvement = 0
-
-        # Save checkpoint
-        save_checkpoint(data_name, epoch, epochs_since_improvement, encoder, decoder, encoder_optimizer,
-                        decoder_optimizer, recent_bleu4, is_best)
+        # is_best = recent_bleu4 > best_bleu4
+        # best_bleu4 = max(recent_bleu4, best_bleu4)
+        # if not is_best:
+        #     epochs_since_improvement += 1
+        #     print("\nEpochs since last improvement: %d\n" % (epochs_since_improvement,))
+        # else:
+        #     epochs_since_improvement = 0
+        #
+        # # Save checkpoint
+        # save_checkpoint(data_name, epoch, epochs_since_improvement, encoder, decoder, encoder_optimizer,
+        #                 decoder_optimizer, recent_bleu4, is_best)
 
 
 def train(train_loader, encoder, decoder, criterion, encoder_optimizer, decoder_optimizer, epoch):

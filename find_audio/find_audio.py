@@ -9,9 +9,8 @@ This script outputs for various queries the top 5 most similar sentences in the 
 from sentence_transformers import SentenceTransformer, models
 import scipy.spatial
 import argparse
-import read_files as read
+from .read_files import *
 import os
-import pandas as pd
 import json
 
 
@@ -30,9 +29,9 @@ def main(model_path, model_type,sentence_corpus, query):
     else:
         #### load sentence BERT models and generate sentence embeddings ####
         embedder = SentenceTransformer(model_path)
-    corpus_embeddings = read.read_from_pickle(os.path.join(sentence_corpus, "embeddings.pkl"))
-    # corpus = read.read_from_tsv(os.path.join(sentence_corpus , "input.tsv"))
-    corpus = read.read_from_tsv(os.path.join(sentence_corpus , "labels.tsv"))
+    corpus_embeddings = read_from_pickle(os.path.join(sentence_corpus, "embeddings.pkl"))
+    # corpus = read_from_tsv(os.path.join(sentence_corpus , "input.tsv"))
+    corpus = read_from_tsv(os.path.join(sentence_corpus , "labels.tsv"))
     mapping = json.load(open(os.path.join(sentence_corpus , "mapping.json" )))
     # print(type(corpus), corpus[2])
     sentences = [item for row in corpus for item in row]

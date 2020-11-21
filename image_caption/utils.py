@@ -38,30 +38,32 @@ def create_input_files(dataset, karpathy_json_path, image_folder, captions_per_i
     test_image_captions = []
     word_freq = Counter()
 
-    for img in data['images']:
-        captions = []
-        for c in img['sentences']:
-            # Update word frequency
-            word_freq.update(c['tokens'])
-            if len(c['tokens']) <= max_len:
-                captions.append(c['tokens'])
-
-        if len(captions) == 0:
-            continue
-
-        path = os.path.join(image_folder, img['filepath'], img['filename']) if dataset == 'coco' else os.path.join(
-            image_folder, img['filename'])
-
-        if img['split'] in {'train', 'restval'}:
-            train_image_paths.append(path)
-            train_image_captions.append(captions)
-        elif img['split'] in {'val'}:
-            val_image_paths.append(path)
-            val_image_captions.append(captions)
-        elif img['split'] in {'test'}:
-            test_image_paths.append(path)
-            test_image_captions.append(captions)
-
+    # for img in data['images'][:10]:
+    #     captions = []
+    #     for c in img['sentences']:
+    #         # Update word frequency
+    #         word_freq.update(c['tokens'])
+    #         if len(c['tokens']) <= max_len:
+    #             captions.append(c['tokens'])
+    #
+    #     if len(captions) == 0:
+    #         continue
+    #
+    #     path = os.path.join(image_folder, img['filepath'], img['filename']) if dataset == 'coco' else os.path.join(
+    #         image_folder, img['filename'])
+    #
+    #     if img['split'] in {'train', 'restval'}:
+    #         train_image_paths.append(path)
+    #         train_image_captions.append(captions)
+        # elif img['split'] in {'val'}:
+        #     val_image_paths.append(path)
+        #     val_image_captions.append(captions)
+        # elif img['split'] in {'test'}:
+        #     test_image_paths.append(path)
+        #     test_image_captions.append(captions)
+    train_image_paths = ['C:\\Class Documents\\DL\\train\\COCO_val2014_000000522418.jpg',
+     'C:\\Class Documents\\DL\\train\\COCO_val2014_000000318219.jpg']
+    train_image_captions = [[['a', 'woman', 'wearing', 'a', 'net', 'on', 'her', 'head', 'cutting', 'a', 'cake'], ['a', 'woman', 'cutting', 'a', 'large', 'white', 'sheet', 'cake'], ['a', 'woman', 'wearing', 'a', 'hair', 'net', 'cutting', 'a', 'large', 'sheet', 'cake'], ['there', 'is', 'a', 'woman', 'that', 'is', 'cutting', 'a', 'white', 'cake'], ['a', 'woman', 'marking', 'a', 'cake', 'with', 'the', 'back', 'of', 'a', 'chefs', 'knife']], [['a', 'young', 'boy', 'standing', 'in', 'front', 'of', 'a', 'computer', 'keyboard'], ['a', 'little', 'boy', 'wearing', 'headphones', 'and', 'looking', 'at', 'a', 'computer', 'monitor'], ['he', 'is', 'listening', 'intently', 'to', 'the', 'computer', 'at', 'school'], ['a', 'young', 'boy', 'stares', 'up', 'at', 'the', 'computer', 'monitor'], ['a', 'young', 'kid', 'with', 'head', 'phones', 'on', 'using', 'a', 'computer']]]
     # Sanity check
     assert len(train_image_paths) == len(train_image_captions)
     assert len(val_image_paths) == len(val_image_captions)

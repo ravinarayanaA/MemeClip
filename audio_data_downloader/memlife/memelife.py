@@ -5,6 +5,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
+
 browser = webdriver.Chrome('C:\\Work\\aardvarc\\drivers\\chromedriver.exe')
 browser.get("https://memebot.life/")
 time.sleep(7)
