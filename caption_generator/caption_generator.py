@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
 
-#@markdown Utility function (run on each Runtime restart)
+# @markdown Utility function (run on each Runtime restart)
 
-from IPython.display import clear_output
 import os
 import sys
 
-
 import torch
+
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print('DEVICE:', DEVICE)
-
-
-
-
-
 
 """Vocabulary tools."""
 
@@ -103,6 +97,7 @@ def build_vocab_from_file(captions_file, tokenizer, min_df=7):
 
     return build_vocab(captions, tokenizer, min_df=min_df)
 
+
 """Text Tokenizers."""
 import abc
 import re
@@ -133,9 +128,8 @@ class CharTokenizer:
     def tokenize(self, text):
         return self.token_pattern.findall(text)
 
-#@title Word and Chararacter Vocab
 
-
+# @title Word and Chararacter Vocab
 
 
 """## 1.3 MemeDataset
@@ -150,8 +144,6 @@ import os
 import torch
 from PIL import Image
 from torch.utils.data import Dataset
-
-
 
 
 class MemeDataset(Dataset):
@@ -248,14 +240,13 @@ class MemeDataset(Dataset):
     def __len__(self):
         return len(self.captions)
 
-#@title Build `MemeDataset`
 
+# @title Build `MemeDataset`
 
 
 # use this to limit the dataset size (300 classes in total)
-NUM_CLASSES = 300 #@param {type:"slider", min:1, max:300, step:1}  
-#PAD_IDX = vocab_words.stoi['<pad>']
-
+NUM_CLASSES = 300  # @param {type:"slider", min:1, max:300, step:1}
+# PAD_IDX = vocab_words.stoi['<pad>']
 
 
 """# 2. Models"""
@@ -391,6 +382,7 @@ class ImageLabelEncoder(nn.Module):
 
         return emb
 
+
 import torch
 
 
@@ -501,10 +493,10 @@ class BeamSearchHelper:
         """Returns bool indicating if all sequences have ended."""
         return torch.all(self.has_ended)
 
+
 """RNN-based models."""
 import torch
 from torch import nn
-
 
 
 class LSTMDecoder(nn.Module):
@@ -642,11 +634,10 @@ class LSTMDecoder(nn.Module):
 
         return output_seq
 
+
 """Image captioning models."""
 import torch
 from torch import nn
-
-
 
 
 class CaptioningLSTM(nn.Module):
@@ -654,6 +645,7 @@ class CaptioningLSTM(nn.Module):
     Encodes input images into a embeddings of size `emb_dim`
     and passes them as the first token to the caption generation decoder.
     """
+
     def __init__(self, num_tokens, emb_dim=256, hidden_size=512, num_layers=2,
                  enc_dropout=0.3, dec_dropout=0.1):
         super(CaptioningLSTM, self).__init__()
@@ -744,6 +736,7 @@ class CaptioningLSTMWithLabels(nn.Module):
     Encoder build combined embeddings of size `emb_dim` for input images and text labels
     and passes them as the first token to the caption generation decoder.
     """
+
     def __init__(self, num_tokens, emb_dim=256, hidden_size=512, num_layers=2,
                  enc_dropout=0.3, dec_dropout=0.1):
         super(CaptioningLSTMWithLabels, self).__init__()
@@ -831,20 +824,18 @@ class CaptioningLSTMWithLabels(nn.Module):
         return model
 
 
-
-#@markdown Model loading utilities
+# @markdown Model loading utilities
 
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 
-
 FILE_TO_CLASS = {
     'LSTMDecoderWords.best.pth': CaptioningLSTM,
-    
+
     'LSTMDecoderWithLabelsWords.best.pth': CaptioningLSTMWithLabels,
-    
+
 }
 
 """IMPORTANT: if some cell in this section crashed, run it again, it should be fine
@@ -854,20 +845,14 @@ FILE_TO_CLASS = {
 ### 2.1.1. LSTM Decoder
 """
 
-
-
-#@markdown Load and build `w_lstm_model_labels`
-
-
+# @markdown Load and build `w_lstm_model_labels`
 
 
 IMG_DIR = 'images_inference'
 
-
 import re
 
 import torch
-
 
 PUNCT_PATTERN = re.compile(r"( )([!#$%&\()*+,\-.\/:;<=>?@\\^{|}~]+)")
 
@@ -946,13 +931,12 @@ def split_caption(text, num_blocks=None):
 
     return text_blocks[:num_blocks]
 
+
 import numpy as np
 from PIL import ImageFont, ImageDraw
 from copy import deepcopy
 
-
-
-
+MEME_FONT_PATH = "fonts"
 
 def memeify_image(img, top='', bottom='', font_path=MEME_FONT_PATH):
     """Adds top and bottom captions to an image.
@@ -1150,28 +1134,28 @@ def caption_image(img, text_lines, font, pos='top'):
 
     return img
 
-#@title Meme generation and captioning function
+
+# @title Meme generation and captioning function
 
 from PIL import Image
 
 
-
-def get_a_meme(model, img_torch, img_pil, caption, T=1., beam_size=7, top_k=50, 
-               labels = None, mode = 'word', device=DEVICE):
+def get_a_meme(model, img_torch, img_pil, caption, T=1., beam_size=7, top_k=50,
+               labels=None, mode='word', device=DEVICE):
     if mode == 'word':
         vocabulary = vocab_words
         datasets = datasets_words
-        delimiter=' '
+        delimiter = ' '
         max_len = 32
     else:
         vocabulary = vocab_chars
         datasets = datasets_chars
-        delimiter=''
+        delimiter = ''
         max_len = 128
-    
+
     model.eval()
     if caption is not None:
-        caption_tensor = torch.tensor(datasets['train']._preprocess_text(caption)[:-1]).unsqueeze(0).to(device) 
+        caption_tensor = torch.tensor(datasets['train']._preprocess_text(caption)[:-1]).unsqueeze(0).to(device)
     else:
         caption_tensor = None
 
@@ -1187,7 +1171,7 @@ def get_a_meme(model, img_torch, img_pil, caption, T=1., beam_size=7, top_k=50,
                 image=img_torch, label=labels, caption=caption_tensor,
                 max_len=max_len, beam_size=beam_size, temperature=T, top_k=top_k
             )
-    
+
     pred_seq = output_seq
     text = seq_to_text(pred_seq, vocab=vocabulary, delimiter=delimiter)
 
@@ -1196,7 +1180,6 @@ def get_a_meme(model, img_torch, img_pil, caption, T=1., beam_size=7, top_k=50,
     # print(bottom)
 
     return memeify_image(img_pil, top, bottom, font_path=FONT_PATH)
-
 
 
 

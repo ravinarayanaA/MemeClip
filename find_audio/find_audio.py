@@ -14,7 +14,7 @@ import os
 import json
 
 
-def main(model_path, model_type,sentence_corpus, query):
+def get_audio(model_path, model_type,sentence_corpus, query):
     if model_type.lower() in ["bert"]:
         word_embedding_model = models.BERT(model_path)
 
@@ -47,13 +47,13 @@ def main(model_path, model_type,sentence_corpus, query):
     results = zip(range(len(distances)), distances)
     results = sorted(results, key=lambda x: x[1])
 
-    print("\n\n======================\n\n")
-    print("Query:", query)
-    print("\nTop 5 most similar sentences in corpus:")
-
-    for idx, distance in results[0:closest_n]:
-        label = sentences[idx].strip()
-        print(label, "(Score: %.4f)" % (1 - distance), f"(File Name: {mapping.get(label, 'Null')})")
+    # print("\n\n======================\n\n")
+    # print("Query:", query)
+    # print("\nTop 5 most similar sentences in corpus:")
+    return sentences[results[-1][0]], mapping.get(sentences[results[-1][0]], "Null")
+    # for idx, distance in results[0:closest_n]:
+    #     label = sentences[idx].strip()
+    #     print(label, "(Score: %.4f)" % (1 - distance), f"(File Name: {mapping.get(label, 'Null')})")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate sentence embedding for each sentence in the sentence corpus ')

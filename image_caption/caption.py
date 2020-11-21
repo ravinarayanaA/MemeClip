@@ -14,10 +14,10 @@ import os
 from scipy.misc.pilutil import imread, imresize
 from PIL import Image
 # from torchviz import make_dot
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
 
 # default `log_dir` is "runs" - we'll be more specific here
-writer = SummaryWriter('runs/caption_experiment_1')
+# writer = SummaryWriter('runs/caption_experiment_1')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -117,7 +117,7 @@ def caption_image_beam_search(encoder, decoder, image_path, word_map, beam_size=
             top_k_scores, top_k_words = scores.view(-1).topk(k, 0, True, True)  # (s)
 
         # Convert unrolled indices to actual indices of scores
-        prev_word_inds = top_k_words / vocab_size  # (s)
+        prev_word_inds = top_k_words // vocab_size  # (s)
         next_word_inds = top_k_words % vocab_size  # (s)
 
         # Add new words to sequences, alphas
@@ -198,7 +198,46 @@ def visualize_att(image_path, seq, alphas, rev_word_map, smooth=True):
     plt.show()
 
 
-def get_image_caption(image, model, word_map, beam_size=5):
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description='Show, Attend, and Tell - Tutorial - Generate Caption')
+#
+#     parser.add_argument('--dir_path', '-i', help='path to directory of images')
+#     parser.add_argument('--model', '-m', help='path to model')
+#     parser.add_argument('--word_map', '-wm', help='path to word map JSON')
+#     parser.add_argument('--beam_size', '-b', default=5, type=int, help='beam size for beam search')
+#     parser.add_argument('--dont_smooth', dest='smooth', action='store_false', help='do not smooth alpha overlay')
+#
+#     args = parser.parse_args()
+#
+#     # Load model
+#     checkpoint = torch.load(args.model, map_location=str(device))
+#
+#     decoder = checkpoint['decoder']
+#     decoder = decoder.to(device)
+#     decoder.eval()
+#
+#     encoder = checkpoint['encoder']
+#     encoder = encoder.to(device)
+#     encoder.eval()
+#
+#
+#     # Load word map (word2ix)
+#     with open(args.word_map, 'r') as j:
+#         word_map = json.load(j)
+#     rev_word_map = {v: k for k, v in word_map.items()}  # ix2word
+#     for image in os.listdir(args.dir_path):
+#         # Encode, decode with attention and beam search
+#         seq, alphas = caption_image_beam_search(encoder, decoder, args.dir_path+image, word_map, args.beam_size)
+#         alphas = torch.FloatTensor(alphas)
+#         out = []
+#         for ind in seq:
+#             if rev_word_map[ind] != "<start>" and rev_word_map[ind] != "<end>":
+#                 out.append(rev_word_map[ind])
+#         print(image,'-->',' '.join(out))
+#         # Visualize caption and attention of best sequence
+#         visualize_att(args.dir_path+image, seq, alphas, rev_word_map, args.smooth)
+#
+def get_image_caption(checkpoint, word_map, image, beam_size=5):
     # parser = argparse.ArgumentParser(description='Show, Attend, and Tell - Tutorial - Generate Caption')
     #
     # parser.add_argument('--dir_path', '-i', help='path to directory of images')
@@ -210,9 +249,6 @@ def get_image_caption(image, model, word_map, beam_size=5):
     # args = parser.parse_args()
 
     smooth = False
-
-    # Load model
-    checkpoint = torch.load(model, map_location=str(device))
 
     decoder = checkpoint['decoder']
     decoder = decoder.to(device)
@@ -240,3 +276,9 @@ def get_image_caption(image, model, word_map, beam_size=5):
     # visualize_att(dir_path+image, seq, alphas, rev_word_map, smooth)
 
     return ' '.join(out)
+
+# image = "C:/Class Documents/DL/project/image_caption/Test_Images/cat.jpg"
+# model_audio_mapper =
+# embedding =
+# captionsFilePath =
+# caption = get_image_caption(image)

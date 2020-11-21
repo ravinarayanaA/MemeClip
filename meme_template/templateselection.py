@@ -5,6 +5,7 @@ import numpy as np
 import time
 import datetime
 from transformers import get_linear_schedule_with_warmup
+import pickle
 
 device = None
 
@@ -217,54 +218,45 @@ from transformers import BertTokenizer
 import torch
 
 device = None
-templates_map_reverse = {0: 'high/drunk guy',
-                         1: 'Angry Cat Meme',
-                         2: 'Desk Flip Rage Guy',
-                         3: 'Willy Wonka',
-                         4: 'african children dancing',
-                         5: 'Annoying Gamer Kid',
-                         6: 'burning house girl',
-                         7: 'evil plan kid',
-                         8: 'You shall not pass',
-                         9: 'Black Kid',
-                         10: 'Grumpy Cat Santa Hat',
-                         11: 'FU*CK THAT GUY',
-                         12: 'so doge',
-                         13: 'Success Kid',
-                         14: 'Joseph Ducreux',
-                         15: 'Skeptical african kid',
-                         16: 'Anchorman Birthday',
-                         17: 'Awkward Seal',
-                         18: 'Grumpy Cat 2',
-                         19: 'Y U No'}
 
-def get_meme_template(input, modelFilePath):
-    print('Loading BERT tokenizer...')
+def get_meme_template(input,n_label, modelFilePath, map_dict):
+    # import pickle
+
+    filename= map_dict
+    templates_map_reverse = pickle.load(open(filename, 'rb'))
+
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
-    loaded_model = BertClassification(25)
-    loaded_model.load_state_dict(torch.load(modelFilePath))
+    loaded_model = BertClassification(n_label)
+    loaded_model.load_state_dict(torch.load(modelFilePath, map_location="cpu"))
     loaded_model.model.eval()
-    prediction_label = []
-    for in_sent in input:
-        encoded_dict = tokenizer.encode_plus(
-            in_sent,  # Sentence to encode.
-            add_special_tokens=True,  # Add '[CLS]' and '[SEP]'
-            max_length=50,  # Pad & truncate all sentences.
-            pad_to_max_length=True,
-            return_attention_mask=True,  # Construct attn. masks.
-            return_tensors='pt',  # Return pytorch tensors.
-        )
-        input_ids = torch.cat([encoded_dict['input_ids']], dim=0)
-        attention_masks = torch.cat([encoded_dict['attention_mask']], dim=0)
-        outputs = loaded_model.model(input_ids, token_type_ids=None, attention_mask=attention_masks)
-        logits = outputs[0]
-        logits = logits.detach().cpu().numpy()
-        prediction_label.append(templates_map_reverse[logits.argmax(axis=1)[0]])
-    return prediction_label
+    # for in_sent in input:
+    encoded_dict = tokenizer.encode_plus(
+        input,  # Sentence to encode.
+        add_special_tokens=True,  # Add '[CLS]' and '[SEP]'
+        max_length=50,  # Pad & truncate all sentences.
+        pad_to_max_length=True,
+        return_attention_mask=True,  # Construct attn. masks.
+        return_tensors='pt',  # Return pytorch tensors.
+    )
+    input_ids = torch.cat([encoded_dict['input_ids']], dim=0)
+    attention_masks = torch.cat([encoded_dict['attention_mask']], dim=0)
+    outputs = loaded_model.model(input_ids, token_type_ids=None, attention_mask=attention_masks)
+    logits = outputs[0]
+    logits = logits.detach().cpu().numpy()
+    return templates_map_reverse[logits.argmax(axis=1)[0]]
 
-# filename = '/content/drive/My Drive/Resume/meme_template_selector.pt'
+# import pickle
+#
+# filename= '50templates_map.sav'
+# templates_map_reverse = pickle.load(open(filename, 'rb'))
+#
+# filename = "bc50.pt"
+#
 # input = ["Eating dinner with a friends family", "a dog is playing with a toy toy",
 #          "a cople of women walking down a street", "a man riding a wave on top of a surf board",
 #          "I am not angry, I am happiness challenged", "I purred once, it was awful",
-#          "this one again? you must be new here", "Say again, I wasn't listening"]
-# print(getMemeTemplate(input, filename))
+#          "this one again? you must be new here", "Say again, I wasn't listening","a small stuffed animal sitting on a table","a black and white cat sitting on a window sill"]
+#
+# input = ["a couple of dogs that are wearing a hat","a black and white cat sitting on a window sill","a herd of cattle standing on top of a dirt field","a close up of a bird in the water","a small stuffed animal sitting on a table","a man riding a wave on top of a surfboard"]
+#
+# print(getMemeTemplate(input,20, filename))

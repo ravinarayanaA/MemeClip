@@ -58,7 +58,7 @@ def textfile2list(path):
     return txt_list
 
 def read_from_tsv(filename):
-    with open(filename, 'r') as mycsvfile:
+    with open(filename, 'r', encoding='utf8') as mycsvfile:
         files = csv.reader(mycsvfile, delimiter='\t')
         dataset = list()
         for row in files:
@@ -66,7 +66,7 @@ def read_from_tsv(filename):
     return dataset
 
 def read_from_csv(filename):
-    with open(  filename, 'r') as mycsvfile:
+    with open(filename, 'r', encoding='utf8') as mycsvfile:
         files = csv.reader(mycsvfile, delimiter=',')
         dataset = list()
         for row in files:
