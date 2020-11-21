@@ -38,8 +38,8 @@ def selectTemplate():
 def getImage(form):
     return ''
 
-@app.route("/selTemp", methods=['GET'])
-def selectTemplate():
+@app.route("/memeClip", methods=['GET'])
+def memeClip():
     form = dict(request.args)
     meme_template = form['meme']
     meme_image, meme_caption = get_meme_caption(caption, meme_template)
