@@ -20,14 +20,14 @@ SPECIAL_TOKENS = {
 }
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-DATA_DIR = 'memes900k'
+DATA_DIR = '../memes900k'
 print('DEVICE:', DEVICE)
 
 def tokenize( text):
     return re.compile(r"[<\w'>]+|[^\w\s]+").findall(text)
 
 def get_meme_caption(caption,meme_template):
-    FILE_IDS_NAME = r'caption_generator\file_ids.txt'
+    FILE_IDS_NAME = r'../caption_generator/file_ids.txt'
     FILE_IDS = {}
     FILE_TO_CLASS = {
         "CaptioningLSTM": CaptioningLSTM,
@@ -40,21 +40,21 @@ def get_meme_caption(caption,meme_template):
             name, gid = line.strip().split('\t')
             FILE_IDS[name] = gid
 
-    ckpt_path = r'caption_generator\LSTMDecoderWords.best.pth'
+    ckpt_path = r'../caption_generator/LSTMDecoderWords.best.pth'
 
     # model_without_label = load_and_build_model(gdrive_id, ckpt_path, model_class)
     # ckpt_path = 'LSTMDecoderWithLabelsWords.best.pth'
     model_class = FILE_TO_CLASS['CaptioningLSTM']
     model_without_label = model_class.from_pretrained(ckpt_path).to(DEVICE)
-    vocab_words = Vocab.load(r'caption_generator\vocab\vocab_words.txt')
+    vocab_words = Vocab.load(r'../caption_generator/vocab/vocab_words.txt')
     vocabulary = vocab_words
-    vocab_stoi = pickle.load(open("caption_generator/pickle_files/token_words_stoi.pickle", "rb"))
-    templates = dill.load(open("caption_generator/pickle_files/datasets_words_templates_dill.pkl", "rb"))
-    images = dill.load(open("caption_generator/pickle_files/datasets_words_images_dill.pkl", "rb"))
+    vocab_stoi = pickle.load(open("../caption_generator/pickle_files/token_words_stoi.pickle", "rb"))
+    templates = dill.load(open("../caption_generator/pickle_files/datasets_words_templates_dill.pkl", "rb"))
+    images = dill.load(open("../caption_generator/pickle_files/datasets_words_images_dill.pkl", "rb"))
 
     label = meme_template
     img_torch = images[label]
-    img_pil = Image.open(templates[label])
+    img_pil = Image.open("C:/Class Documents/DL/project/"+templates[label])
 
     img_torch = img_torch.unsqueeze(0)
     model = "withoutlabels"
@@ -92,18 +92,18 @@ def get_meme_caption(caption,meme_template):
     return memeify_image(img_pil, top, bottom, font_path="C:\Class Documents\DL\project\caption_generator\fonts\impact.ttf"), text
 
 def get_meme_clip(input_image, input_audio, video_name):
-    dir_path = r"C:\Class Documents\DL\project\audio_data_downloader\voicy\dataset"
+    dir_path = r"C:/Class Documents/DL/project/audio_data_downloader/voicy/dataset"
     input_still = ffmpeg.input(r"C:\Class Documents\DL\project\\"+input_image)
-    input_audio = ffmpeg.input(dir_path+"\\"+input_audio)
+    input_audio = ffmpeg.input(dir_path+"/"+input_audio)
 
-    outPath = r"C:/Class Documents/DL/project/memeclips/"+video_name+".mp4"
+    outPath = r"C:/Class Documents/DL/project/web_app/static/"+video_name+".mp4"
     (
         ffmpeg
             .concat(input_still, input_audio, v=1, a=1)
             .output(outPath)
             .run(overwrite_output=True)
     )
-    return outPath
+    return "/static/"+video_name+".mp4"
 
 if __name__ == "__main__":
     image = "C:\Class Documents\DL\project\image_caption\Test_Images\cat.jpg"
@@ -111,8 +111,8 @@ if __name__ == "__main__":
     word_map = "./weights/WORDMAP_coco_5_cap_per_img_5_min_word_freq.json"
     model_audio_mapper = r"C:\Class Documents\DL\project\find_audio\roberta-base-nli-mean-tokens"
     embedding = r"C:\Class Documents\DL\project\find_audio\files"
-    template_model = r"C:\Class Documents\DL\project\meme_template\bc50.pt"
-    map_file = r"C:\Class Documents\DL\project\meme_template\50templates_map.sav"
+    template_model = r"C:\Class Documents\DL\project\meme_template\bc16.pt"
+    map_file = r"/meme_template/16templates_map.sav"
 
     checkpoint = torch.load(model_image_caption, map_location=str(DEVICE))
     caption = get_image_caption(checkpoint, word_map, image)

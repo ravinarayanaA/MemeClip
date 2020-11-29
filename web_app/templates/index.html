@@ -2,9 +2,852 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MemeClip</title>
+    <style>/*custom font*/
+    /*custom font*/
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+    /*basic reset*/
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        height: 100%;
+        background: #6441A5; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
+    }
+
+    body {
+        font-family: montserrat, arial, verdana;
+        background: transparent;
+    }
+
+    /*form styles*/
+    #msform {
+        text-align: center;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    #msform fieldset {
+        background: white;
+        border: 0 none;
+        border-radius: 0px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 80%;
+        margin: 0 10%;
+        min-height: 80vh;
+        max-height: 80vh;
+
+        /*stacking fieldsets above each other*/
+        position: relative;
+    }
+
+    /*Hide all except first fieldset*/
+    #msform fieldset:not(:first-of-type) {
+        display: none;
+    }
+
+    /*inputs*/
+    #msform input, #msform textarea {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 0px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+
+    #msform input:focus, #msform textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #ee0979;
+        outline-width: 0;
+        transition: All 0.5s ease-in;
+        -webkit-transition: All 0.5s ease-in;
+        -moz-transition: All 0.5s ease-in;
+        -o-transition: All 0.5s ease-in;
+    }
+
+    /*buttons*/
+    #msform .action-button {
+        width: 132px;
+        background: #ee0979;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+
+    #msform .action-button:hover, #msform .action-button:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+    }
+
+    #msform .action-button-previous {
+        width: 100px;
+        background: #C5C5F1;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+
+    #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+    }
+
+    /*headings*/
+    .fs-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #2C3E50;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .fs-subtitle {
+        font-weight: normal;
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    /*progressbar*/
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        /*CSS counters to number the steps*/
+        counter-reset: step;
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 9px;
+        width: 33.3333%;
+        float: left;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+    #progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 24px;
+        height: 24px;
+        line-height: 26px;
+        display: block;
+        font-size: 12px;
+        color: #333;
+        background: white;
+        border-radius: 25px;
+        margin: 0 auto 10px auto;
+    }
+
+    /*progressbar connectors*/
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -50%;
+        top: 9px;
+        z-index: -1; /*put it behind the numbers*/
+    }
+
+    #progressbar li:first-child:after {
+        /*connector not needed before the first step*/
+        content: none;
+    }
+
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #progressbar li.active:before, #progressbar li.active:after {
+        background: #ee0979;
+        color: white;
+    }
+
+
+    /* Not relevant to this form */
+    .dme_link {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .dme_link a {
+        background: #FFF;
+        font-weight: bold;
+        color: #ee0979;
+        border: 0 none;
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 5px 25px;
+        font-size: 12px;
+    }
+
+    .dme_link a:hover, .dme_link a:focus {
+        background: #C5C5F1;
+        text-decoration: none;
+    }
+
+    .droppable {
+        width: 70vh;
+        height: 70vh;
+        background-color: #fff;
+        margin: auto;
+        display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        border-radius: 12px;
+        align-content: flex-start;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+
+    .droppable.is-dragging .list > * {
+        pointer-events: none;
+    }
+
+    .list {
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        scroll-behavior: smooth;
+    }
+
+    .droppable.is-over {
+        box-shadow: 0px 10px 26px rgba(30, 24, 37, 0.33), 0 0 0px 15px rgba(53, 40, 66, 0.07);
+    }
+
+    .item {
+        padding: 10px 20px;
+        width: 100%;
+        -webkit-box-align: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .item > * {
+        opacity: 0;
+    }
+
+    .item-img {
+        width: 90%;
+        height: 90%;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .loaded-image {
+        position: absolute;
+        top: 0;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        left: 0;
+        opacity: 0;
+        width: 60px;
+        height: 48px;
+        border-radius: 4px;
+        overflow: hidden;
+        background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    }
+
+    .loaded-image > img {
+        opacity: 0;
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+
+    .loaded-image > span {
+        position: absolute;
+        left: 50%;
+        opacity: 0;
+        width: 32px;
+        height: 32px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        top: 50%;
+    }
+
+    .loaded-image svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+    }
+
+    img:before {
+        position: absolute;
+        content: "";
+        background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    }
+
+    .item-details {
+        -webkit-box-flex: 1;
+        flex: 1;
+        text-align: center;
+        overflow: hidden;
+        padding-right: 32px;
+    }
+
+    .item-name {
+        font-size: 15px;
+        margin-bottom: 4px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 600;
+    }
+
+    .item-size {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: #9699b3;
+    }
+
+    .item-delete {
+        border: 0;
+        background-color: transparent;
+        width: 18px;
+        height: 18px;
+        padding: 0;
+        color: transparent;
+        white-space: nowrap;
+        outline: 0;
+        cursor: pointer;
+        position: relative;
+        margin-right: 32px;
+    }
+
+    .item-delete:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        -webkit-transition: .3s;
+        transition: .3s;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%23bac1cb' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'%3e%3cpath d='M417.7 75.7A8.9 8.9 0 00411 73H323l-20-47.7c-2.8-7-8-13-15.4-18S272.5 0 264.9 0h-91.3C166 0 158.5 2.5 151 7.4c-7.4 5-12.5 11-15.4 18l-20 47.7H27.4a9 9 0 00-6.6 2.6 9 9 0 00-2.5 6.5v18.3c0 2.7.8 4.8 2.5 6.6a8.9 8.9 0 006.6 2.5h27.4v271.8c0 15.8 4.5 29.3 13.4 40.4a40.2 40.2 0 0032.3 16.7H338c12.6 0 23.4-5.7 32.3-17.2a64.8 64.8 0 0013.4-41V109.6h27.4c2.7 0 4.9-.8 6.6-2.5a8.9 8.9 0 002.6-6.6V82.2a9 9 0 00-2.6-6.5zm-248.4-36a8 8 0 014.9-3.2h90.5a8 8 0 014.8 3.2L283.2 73H155.3l14-33.4zm177.9 340.6a32.4 32.4 0 01-6.2 19.3c-1.4 1.6-2.4 2.4-3 2.4H100.5c-.6 0-1.6-.8-3-2.4a32.5 32.5 0 01-6.1-19.3V109.6h255.8v270.7z'/%3e%3cpath d='M137 347.2h18.3c2.7 0 4.9-.9 6.6-2.6a9 9 0 002.5-6.6V173.6a9 9 0 00-2.5-6.6 8.9 8.9 0 00-6.6-2.6H137c-2.6 0-4.8.9-6.5 2.6a8.9 8.9 0 00-2.6 6.6V338c0 2.7.9 4.9 2.6 6.6a8.9 8.9 0 006.5 2.6zM210.1 347.2h18.3a8.9 8.9 0 009.1-9.1V173.5c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a8.9 8.9 0 00-9.1 9.1V338a8.9 8.9 0 009.1 9.1zM283.2 347.2h18.3c2.7 0 4.8-.9 6.6-2.6a8.9 8.9 0 002.5-6.6V173.6c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a9 9 0 00-6.6 2.6 8.9 8.9 0 00-2.5 6.6V338a9 9 0 002.5 6.6 9 9 0 006.6 2.6z'/%3e%3c/svg%3e");
+    }
+
+    .item-delete:after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        background-color: #f3dbff;
+        border-radius: 50%;
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+
+    .item-delete:hover:after {
+        -webkit-transform: translate(-50%, -50%) scale(2.2);
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 1;
+    }
+
+    .item-delete:hover:before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%234f555f' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'%3e%3cpath d='M417.7 75.7A8.9 8.9 0 00411 73H323l-20-47.7c-2.8-7-8-13-15.4-18S272.5 0 264.9 0h-91.3C166 0 158.5 2.5 151 7.4c-7.4 5-12.5 11-15.4 18l-20 47.7H27.4a9 9 0 00-6.6 2.6 9 9 0 00-2.5 6.5v18.3c0 2.7.8 4.8 2.5 6.6a8.9 8.9 0 006.6 2.5h27.4v271.8c0 15.8 4.5 29.3 13.4 40.4a40.2 40.2 0 0032.3 16.7H338c12.6 0 23.4-5.7 32.3-17.2a64.8 64.8 0 0013.4-41V109.6h27.4c2.7 0 4.9-.8 6.6-2.5a8.9 8.9 0 002.6-6.6V82.2a9 9 0 00-2.6-6.5zm-248.4-36a8 8 0 014.9-3.2h90.5a8 8 0 014.8 3.2L283.2 73H155.3l14-33.4zm177.9 340.6a32.4 32.4 0 01-6.2 19.3c-1.4 1.6-2.4 2.4-3 2.4H100.5c-.6 0-1.6-.8-3-2.4a32.5 32.5 0 01-6.1-19.3V109.6h255.8v270.7z'/%3e%3cpath d='M137 347.2h18.3c2.7 0 4.9-.9 6.6-2.6a9 9 0 002.5-6.6V173.6a9 9 0 00-2.5-6.6 8.9 8.9 0 00-6.6-2.6H137c-2.6 0-4.8.9-6.5 2.6a8.9 8.9 0 00-2.6 6.6V338c0 2.7.9 4.9 2.6 6.6a8.9 8.9 0 006.5 2.6zM210.1 347.2h18.3a8.9 8.9 0 009.1-9.1V173.5c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a8.9 8.9 0 00-9.1 9.1V338a8.9 8.9 0 009.1 9.1zM283.2 347.2h18.3c2.7 0 4.8-.9 6.6-2.6a8.9 8.9 0 002.5-6.6V173.6c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a9 9 0 00-6.6 2.6 8.9 8.9 0 00-2.5 6.6V338a9 9 0 002.5 6.6 9 9 0 006.6 2.6z'/%3e%3c/svg%3e");
+    }
+
+    .droppable.is-over .item {
+        opacity: 0.5;
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+
+    .info {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .list:empty + .info {
+        opacity: 1;
+    }
+
+    .info-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-svg {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .info-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    #loading_img {
+        width: 250px;
+        height: 300px;
+        margin-top: 20vh;
+    }
+
+    .bottom {
+        position: absolute;
+        right: 635px;
+        bottom: 0;
+    }
+
+    </style>
 </head>
+
 <body>
-TESTING
+<form id="msform">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form id="msform1">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Drag and drop image</li>
+                    <li>Image caption</li>
+                    <li>Meme Clip</li>
+                </ul>
+                <!-- fieldsets -->
+                <fieldset>
+                    <div class="droppable">
+                        <div class="list"></div>
+                        <div class="info">
+                            <div class="info-drag info-item">
+                                <svg class="info-svg" fill="#3f4754" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 512 512">
+                                    <path class="filled-ball"
+                                          d="M149.332031 360.078125c0 41.238281-33.429687 74.667969-74.664062 74.667969C33.429688 434.746094 0 401.316406 0 360.078125c0-41.234375 33.429688-74.664063 74.667969-74.664063 41.234375 0 74.664062 33.429688 74.664062 74.664063zm0 0"
+                                          fill="#e0c3fc"/>
+                                    <path class="ball"
+                                          d="M220.332031 304.078125c0 41.238281-33.429687 74.667969-74.664062 74.667969C104.429688 378.746094 71 345.316406 71 304.078125c0-41.234375 33.429688-74.664063 74.667969-74.664063 41.234375 0 74.664062 33.429688 74.664062 74.664063zm0 0"
+                                          fill="#8ec5fc" opacity="0"/>
+                                    <path class="hand"
+                                          d="M331.734375 509.414062H202.667969c-5.890625 0-10.667969-4.78125-10.667969-10.667968 0-29.417969 23.9375-53.332032 53.332031-53.332032H262.25l-81.558594-81.558593c-12.96875-12.96875-12.96875-34.113281 0-47.082031 12.992188-12.949219 34.113282-12.949219 47.085938 0l19.132812 19.113281c1.625-3.625 3.90625-7.039063 6.890625-10.027344 7.40625-7.402344 18.050781-10.835937 28.203125-9.429687 1.21875-6.3125 4.246094-12.351563 9.132813-17.234376 9.320312-9.34375 22.824219-11.96875 34.496093-7.894531 1.554688-4.90625 4.289063-9.535156 8.167969-13.441406 12.972657-12.96875 34.113281-12.96875 47.085938 0l33.066406 33.089844C435.902344 332.902344 448 362.105469 448 393.167969c0 64.105469-52.160156 116.246093-116.265625 116.246093zm-116.585937-21.335937h116.585937c52.351563 0 94.933594-42.578125 94.933594-94.910156 0-25.367188-9.878907-49.214844-27.796875-67.113281l-33.070313-33.089844c-4.671875-4.671875-12.242187-4.671875-16.914062 0s-4.671875 12.246094 0 16.917968C350.953125 311.953125 352 314.683594 352 317.414062c0 2.730469-1.046875 5.460938-3.113281 7.550782-4.160157 4.160156-10.925781 4.160156-15.085938 0l-10.664062-10.667969c-4.671875-4.671875-12.246094-4.671875-16.917969 0-2.261719 2.242187-3.5 5.269531-3.5 8.449219 0 3.179687 1.238281 6.207031 3.5 8.449218l10.667969 10.664063C318.953125 343.953125 320 346.683594 320 349.414062c0 2.730469-1.046875 5.460938-3.113281 7.550782-4.160157 4.160156-10.925781 4.160156-15.085938 0l-16-16c-4.519531-4.5-12.394531-4.5-16.914062 0-2.261719 2.238281-3.5 5.269531-3.5 8.449218 0 3.175782 1.238281 6.164063 3.476562 8.445313l26.6875 26.691406c2.070313 2.066407 3.117188 4.796875 3.117188 7.527344s-1.046875 5.460937-3.117188 7.554687c-4.160156 4.160157-10.921875 4.160157-15.082031 0l-67.777344-67.777343c-4.671875-4.671875-12.242187-4.671875-16.914062 0-2.261719 2.238281-3.5 5.269531-3.5 8.449219 0 3.175781 1.238281 6.207031 3.5 8.445312l99.773437 99.777344c3.050781 3.050781 3.96875 7.636718 2.304688 11.625-1.640625 3.992187-5.546875 6.59375-9.855469 6.59375h-42.667969c-13.90625 0-25.769531 8.917968-30.183593 21.332031zm0 0"/>
+                                    <path d="M74.667969 434.746094C33.492188 434.746094 0 401.253906 0 360.078125c0-41.171875 33.492188-74.664063 74.667969-74.664063 41.171875 0 74.664062 33.492188 74.664062 74.664063 0 41.175781-33.492187 74.667969-74.664062 74.667969zm0-128c-29.398438 0-53.335938 23.914062-53.335938 53.332031 0 29.421875 23.9375 53.335937 53.335938 53.335937C104.0625 413.414062 128 389.5 128 360.078125c0-29.417969-23.9375-53.332031-53.332031-53.332031zm0 0"/>
+                                    <path d="M452.414062 144.976562c-4.796874 0-9.171874-3.265624-10.34375-8.148437-1.386718-5.742187 2.132813-11.5 7.851563-12.886719 5.78125-1.410156 11.261719-3.753906 16.253906-6.976562 4.949219-3.15625 11.5625-1.75 14.742188 3.199218 3.179687 4.949219 1.769531 11.5625-3.199219 14.742188-7 4.5-14.65625 7.785156-22.765625 9.769531-.851563.191407-1.707031.300781-2.539063.300781zm-41.703124-4.011718c-1.472657 0-2.988282-.320313-4.4375-.960938-7.554688-3.453125-14.464844-8.128906-20.503907-13.910156-4.265625-4.050781-4.414062-10.8125-.339843-15.082031 4.074218-4.265625 10.835937-4.4375 15.082031-.339844 4.308593 4.117187 9.238281 7.464844 14.65625 9.917969 5.355469 2.457031 7.703125 8.769531 5.269531 14.144531-1.792969 3.925781-5.675781 6.230469-9.726562 6.230469zm87.125-37.289063c-1.152344 0-2.328126-.195312-3.5-.578125-5.566407-1.917968-8.511719-8-6.59375-13.566406 1.941406-5.589844 2.925781-11.457031 2.925781-17.453125 0-5.117187-.707031-10.175781-2.132813-15.015625-1.664062-5.65625 1.578125-11.5625 7.230469-13.25 5.71875-1.640625 11.582031 1.601562 13.246094 7.234375C510.996094 57.871094 512 64.953125 512 72.101562c0 8.363282-1.367188 16.574219-4.074219 24.40625-1.535156 4.414063-5.675781 7.167969-10.089843 7.167969zM373.953125 91.835938c-5.226563 0-9.773437-3.839844-10.5625-9.152344-.488281-3.480469-.722656-7.019532-.722656-10.625 0-4.820313.445312-9.535156 1.34375-14.121094 1.109375-5.761719 6.65625-9.515625 12.5-8.449219 5.78125 1.109375 9.558593 6.699219 8.449219 12.5C384.339844 65.253906 384 68.625 384 72.078125c0 2.605469.171875 5.121094.535156 7.574219.832032 5.824218-3.203125 11.242187-9.046875 12.074218-.511719.085938-1.023437.109376-1.535156.109376zm21.480469-57.453126c-2.984375 0-5.949219-1.257812-8.0625-3.691406-3.863282-4.4375-3.371094-11.175781 1.066406-15.039062 6.292969-5.460938 13.417969-9.792969 21.121094-12.882813 5.4375-2.21875 11.6875.445313 13.867187 5.90625 2.195313 5.460938-.449219 11.691407-5.910156 13.867188-5.527344 2.21875-10.605469 5.332031-15.125 9.238281-1.984375 1.75-4.480469 2.601562-6.957031 2.601562zm79.019531-3.773437c-2.15625 0-4.308594-.640625-6.1875-1.984375-4.839844-3.457031-10.195313-6.058594-15.890625-7.722656-5.65625-1.664063-8.898438-7.574219-7.234375-13.25 1.664063-5.652344 7.550781-8.851563 13.25-7.230469 8 2.347656 15.507813 5.992187 22.292969 10.859375 4.800781 3.433594 5.910156 10.089844 2.472656 14.867188-2.109375 2.902343-5.375 4.460937-8.703125 4.460937zm0 0"/>
+                                    <path d="M106.667969 306.746094c-.832031 0-1.664063-.105469-2.519531-.296875-5.738282-1.367188-9.257813-7.148438-7.871094-12.886719 1.664062-6.914062 4.585937-14.398438 8.703125-22.230469 2.730469-5.203125 9.21875-7.273437 14.402343-4.5 5.226563 2.730469 7.230469 9.171875 4.5 14.398438-3.285156 6.292969-5.609374 12.117187-6.847656 17.324219-1.171875 4.90625-5.546875 8.191406-10.367187 8.191406zM138.515625 251.75c-2.367187 0-4.777344-.789062-6.738281-2.410156-4.566406-3.734375-5.226563-10.453125-1.496094-15.019532 4.480469-5.460937 9.324219-11.007812 14.464844-16.578124 4.011718-4.328126 10.730468-4.585938 15.082031-.597657 4.332031 4.011719 4.585937 10.753907.597656 15.085938-4.863281 5.246093-9.40625 10.453125-13.632812 15.613281-2.132813 2.582031-5.183594 3.90625-8.277344 3.90625zm44.355469-46.1875c-2.882813 0-5.761719-1.152344-7.851563-3.457031-3.988281-4.328125-3.691406-11.09375.640625-15.082031 5.289063-4.863282 10.707032-9.683594 16.253906-14.421876 4.460938-3.796874 11.179688-3.304687 15.039063 1.175782 3.839844 4.457031 3.308594 11.199218-1.171875 15.039062-5.332031 4.585938-10.601562 9.238282-15.679688 13.929688-2.070312 1.878906-4.652343 2.816406-7.230468 2.816406zm49.300781-40.980469c-3.222656 0-6.421875-1.453125-8.511719-4.246093-3.5625-4.695313-2.625-11.390626 2.089844-14.933594 5.800781-4.394532 11.648438-8.660156 17.515625-12.820313 4.796875-3.394531 11.453125-2.261719 14.867187 2.558594 3.414063 4.800781 2.261719 11.457031-2.558593 14.871094-5.675781 4.007812-11.351563 8.148437-16.980469 12.414062-1.921875 1.472657-4.183594 2.15625-6.421875 2.15625zm52.949219-36.054687c-3.605469 0-7.125-1.835938-9.132813-5.140625-3.050781-5.035157-1.429687-11.585938 3.605469-14.65625 6.421875-3.902344 12.757812-7.550781 18.964844-10.902344 5.183594-2.792969 11.671875-.894531 14.464844 4.289063 2.816406 5.183593.898437 11.648437-4.289063 14.464843-5.90625 3.199219-11.945313 6.675781-18.089844 10.386719-1.75 1.046875-3.648437 1.558594-5.523437 1.558594zm57.300781-28.5c-4.375 0-8.46875-2.710938-10.046875-7.0625-1.984375-5.546875.894531-11.648438 6.441406-13.652344 8.148438-2.921875 15.679688-4.972656 22.378906-6.125 5.757813-.980469 11.304688 2.925781 12.308594 8.75.980469 5.800781-2.921875 11.304688-8.746094 12.308594-5.460937.917968-11.777343 2.664062-18.730468 5.160156-1.195313.40625-2.410156.621094-3.605469.621094zm0 0"/>
+                                </svg>
+                                <div class="info-text">Drag an image to upload</div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="memeclip" class="next action-button" value="Create MemeClip"/>
+                </fieldset>
+                <fieldset>
+                    <img id="img_caption_img" style="min-width: 400px;max-height: 290px;width:400px;"/>
+                    <p id="img_caption"></p>
+                    <p style="display: none;margin-top: 3%;" id="selected_template">Template Selected:</p>
+                    <p id="template_selected"></p>
+                    <img id="small_load" style="width:5%;margin-top: 10%;" src="/static/load2.gif">
+                    <p style="text-align: center" id="load_text">Selecting a meme template for the image...</p>
+                    <input type="button" name="previous" class="previous action-button-previous bottom"
+                           value="Previous"/>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <video id="video" controls="" autoplay="" name="media">
+                        </video>
+                    </div>
+                    <input type="button" name="previous" class="previous action-button-previous bottom"
+                           value="Previous"/>
+                </fieldset>
+                <fieldset id="loading">
+                    <img src="/static/loading.gif" id="loading_img">
+                    <p id="loading_text" style="text-align: center">Attention model is analyzing your image...</p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</form>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+        type="text/javascript"></script>
+
+<script>
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+    var file_name;
+    var dropped_image;
+    var image_caption;
+    var meme_template;
+
+    function get_meme_clip(current_fs) {
+        $("#load_text").hide();
+        $("#small_load").hide();
+        next_fs = current_fs.next();
+        current_fs.hide();
+        $("#loading_text").html("Funniest MemeClip is in the making!!");
+        $("#loading").show();
+        $.ajax({
+            url: "/memeClip",
+            type: 'POST',
+            data: {
+                'caption': image_caption,
+                'meme': meme_template
+            },
+            success: function (data) {
+                var source = document.createElement('source');
+                source.setAttribute('src', data);
+                document.getElementById("video")
+                video = document.getElementById("video");
+                video.appendChild(source);
+                video.play();
+                $("#loading").hide();
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                next_fs.show();
+            },
+            error: function (errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+    }
+
+    function get_meme_template(caption, current_fs) {
+        $("#selected_template").hide();
+        $.ajax({
+            url: "/selTemp",
+            type: 'POST',
+            data: {
+                'caption': caption,
+            },
+            success: function (data) {
+                console.log(data);
+                meme_template = data;
+                $("#template_selected").html(data);
+                $("#selected_template").show();
+                $("#load_text").html("Creating MemeClip... Hold on...");
+                //show the next fieldset
+                setTimeout(function () {
+                    get_meme_clip(current_fs);
+                }, 5000);
+            },
+            error: function (errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+    }
+
+    $(".next").click(function () {
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+            if ($(this)[0].name == "memeclip") {
+                current_fs.hide();
+                $("#loading_text").html("Attention model is analyzing your image...")
+                $("#loading").show();
+
+                $.ajax({
+                    url: "/i2c",
+                    type: 'POST',
+                    data: {
+                        'image_name': file_name
+                    },
+                    success: function (data) {
+                        console.log(data);
+                        image_caption = data;
+                        const reader = new FileReader();
+                        reader.readAsDataURL(dropped_image);
+                        reader.onload = function (event) {
+                            $("#loading").hide();
+                            //activate next step on progressbar using the index of next_fs
+                            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                            console.log(event.target.result);
+                            $("#img_caption_img").attr("src", event.target.result);
+                            $("#img_caption").html(data);
+                            next_fs.show();
+                            get_meme_template(image_caption, next_fs);
+                        };
+                        //show the next fieldset
+                    },
+                    error: function (errorThrown) {
+                        console.log(errorThrown);
+                    }
+                });
+            }
+
+        }
+    );
+
+    $(".previous").click(function () {
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+        //show the previous fieldset
+        previous_fs.show();
+        current_fs.hide();
+    });
+
+    $(".submit").click(function () {
+        return false;
+    })
+</script>
+<script>
+    const droppable = document.querySelector(".droppable");
+    const list = document.querySelector(".list");
+    const ball = document.querySelector(".ball");
+    const filledBall = document.querySelector(".filled-ball");
+    const hand = document.querySelector(".hand");
+
+    const reader = new FileReader();
+
+    const formatBytes = (bytes, decimals = 2) => {
+        if (bytes === 0) return "0 Bytes";
+        const k = 1024;
+        const dm = decimals < 0 ? 0 : decimals;
+        const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + sizes[i];
+    };
+
+    let isDragging = 0;
+
+    document.addEventListener("dragover", e => {
+        e.preventDefault();
+        isDragging++;
+        if (isDragging === 1) droppable.classList.add("is-dragging");
+    });
+
+    document.addEventListener("drop", e => {
+        e.preventDefault();
+        isDragging = 0;
+        droppable.classList.remove("is-dragging");
+    });
+
+    list.addEventListener("dragover", e => {
+        e.preventDefault();
+    });
+
+    const dragtl = gsap.timeline({paused: true});
+
+    dragtl.to(
+        ball,
+        {duration: 0.4, translateX: "286px", autoAlpha: 1, translateY: "-230px"},
+        "drag").to(
+        hand,
+        {
+            duration: 0.4,
+            transformOrigin: "right",
+            rotate: "66deg",
+            translateY: "70px",
+            translateX: "-20px"
+        },
+
+        "drag");
+
+
+    list.addEventListener("dragenter", e => {
+        e.preventDefault();
+        droppable.classList.add("is-over");
+        dragtl.play();
+    });
+
+    list.addEventListener("dragleave", e => {
+        e.preventDefault();
+        droppable.classList.remove("is-over");
+        dragtl.reverse();
+    });
+
+    list.addEventListener("drop", e => {
+        e.preventDefault();
+        let sadly = 0;
+        const {offsetX, offsetY} = e;
+        const {files} = e.dataTransfer;
+        file_name = files[0].name;
+        reader.readAsDataURL(files[0]);
+        dropped_image = files[0];
+        reader.addEventListener("load", () => {
+            sadly++;
+            if (sadly > 1) return;
+            itemMarkup(files[0], reader.result, offsetX, offsetY);
+        });
+
+        droppable.classList.remove("is-over");
+    });
+
+    const itemMarkup = (file, url, x, y) => {
+        const item = document.createElement("div");
+        const id = Math.random().toString(36).substr(2, 9);
+
+        item.classList.add("item");
+        item.setAttribute("id", id);
+        item.innerHTML = `
+    <div></div><div class="item-img">
+      <img style="min-width: 400px;max-height: 290px;width:400px;" src="${url}" />
+    </div>
+    <div class="item-details">
+      <div class="item-name">${file.name}</div>
+      <div class="item-size">SIZE: ${formatBytes(file.size)}</div>
+    </div>
+    <div></div>
+    <button class="item-delete" data-id="${id}"></button>
+`;
+
+        list.append(item);
+
+        const itemDeleteBtn = item.querySelector(".item-delete");
+        itemDeleteBtn.addEventListener("click", e => {
+            deleteItem(e);
+        });
+
+        const itemImage = item.querySelector(".item-img");
+        const imageLeft = itemImage.offsetLeft;
+        const imageTop = itemImage.offsetTop;
+        const image = document.createElement("div");
+
+        image.classList.add("loaded-image");
+        image.innerHTML = `
+    <img src="${url}" />
+    <span>
+      <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330">
+        <path d="M165 7.5c-8.284 0-15 6.716-15 15v60c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15v-60c0-8.284-6.716-15-15-15z"/>
+        <path d="M165 262.5c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15v-30c0-8.284-6.716-15-15-15z"/>
+        <path d="M315 157.5h-60c-8.284 0-15 6.716-15 15s6.716 15 15 15h60c8.284 0 15-6.716 15-15s-6.716-15-15-15z"/>
+        <path d="M90 172.5c0-8.284-6.716-15-15-15H15c-8.284 0-15 6.716-15 15s6.716 15 15 15h60c8.284 0 15-6.716 15-15z"/>
+        <path d="M281.673 55.827c-5.857-5.858-15.355-5.858-21.213 0l-42.427 42.427c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.394 10.606 4.394 3.839 0 7.678-1.464 10.607-4.394l42.427-42.427c5.858-5.858 5.858-15.355 0-21.213z"/>
+        <path d="M90.753 225.533L48.328 267.96c-5.857 5.858-5.857 15.355 0 21.213 2.929 2.929 6.768 4.393 10.607 4.393 3.839 0 7.678-1.464 10.607-4.393l42.426-42.427c5.857-5.858 5.857-15.355 0-21.213-5.859-5.858-15.356-5.858-21.215 0z"/>
+        <path d="M69.541 55.827c-5.858-5.858-15.355-5.857-21.213 0-5.858 5.858-5.858 15.355 0 21.213l42.426 42.427c2.93 2.929 6.768 4.394 10.607 4.394 3.838 0 7.678-1.465 10.606-4.393 5.858-5.858 5.858-15.355 0-21.213L69.541 55.827z"/>
+      </svg>
+    </span>
+  `;
+
+        list.append(image);
+        let progress = 0;
+        const tl = gsap.timeline({
+            onComplete: () => {
+                image.remove();
+                itemImage.style.opacity = 1;
+                list.scrollTo(0, list.scrollHeight);
+            }
+        });
+
+
+        const itemChildren = item.querySelectorAll("*:not(.item-img)");
+        const loadedImg = image.querySelector("img");
+        const loadedSVG = image.querySelector("span");
+        const iLeft = item.offsetLeft;
+        const iTop = item.offsetTop;
+
+        tl.set(droppable, {pointerEvents: "none"}).fromTo(
+            image,
+            {
+                autoAlpha: 1,
+                width: 20,
+                height: 20,
+                x: x - 10,
+                y: y - 10,
+                borderRadius: "50%"
+            },
+
+            {duration: 0.3, width: 70, height: 70, x: 270, y: 290}).to(loadedSVG, {
+            autoAlpha: 1,
+            duration: 0.4
+        }, "loading").to(
+            image,
+            {
+                rotation: 720,
+                duration: 1.2
+            },
+
+            "loading").to(loadedSVG, {autoAlpha: 0, duration: 0.4}).to(loadedImg, {
+            autoAlpha: 1,
+            duration: 0.4
+        }, "-=.1").to(
+            image,
+            {},
+
+            "-=.5").set(itemImage, {autoAlpha: 1}).fromTo(
+            itemChildren,
+            {autoAlpha: 0, y: 30},
+            {autoAlpha: 1, y: 0, duration: 0.3, stagger: 0.06}).to(image, {
+            autoAlpha: 0,
+            duration: 0.3
+        }, "-=.2").set(droppable, {pointerEvents: "all"});
+    };
+
+
+    const deleteItem = e => {
+        const parent = e.target.parentNode;
+        const children = parent.querySelectorAll(":scope > *");
+
+        const deletetl = gsap.timeline({
+            onComplete: () => {
+                parent.remove();
+                const item = document.querySelector(".item");
+                if (!item) dragtl.reverse();
+            }
+        });
+
+
+        deletetl.to(children, {autoAlpha: 0, y: -10, duration: 0.2, stagger: 0.1}).to(
+            parent,
+            {height: 0, paddingTop: 0, paddingBottom: 0, duration: 0.5},
+            "-=.15");
+
+    };
+</script>
+
+
 </html>
