@@ -9,6 +9,7 @@ import re
 import pickle
 import dill
 
+
 SPECIAL_TOKENS = {
     'PAD': '<pad>',
     'UNK': '<unk>',
@@ -19,8 +20,8 @@ SPECIAL_TOKENS = {
 }
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print('DEVICE:', DEVICE)
 DATA_DIR = 'memes900k'
+print('DEVICE:', DEVICE)
 
 def tokenize( text):
     return re.compile(r"[<\w'>]+|[^\w\s]+").findall(text)
@@ -95,12 +96,15 @@ def get_meme_clip(input_image, input_audio, video_name):
     input_still = ffmpeg.input(r"C:\Class Documents\DL\project\\"+input_image)
     input_audio = ffmpeg.input(dir_path+"\\"+input_audio)
 
+    outPath = r"C:/Class Documents/DL/project/memeclips/"+video_name+".mp4"
     (
         ffmpeg
             .concat(input_still, input_audio, v=1, a=1)
-            .output(r"C:/Class Documents/DL/project/memeclips/"+video_name+".mp4")
+            .output(outPath)
             .run(overwrite_output=True)
     )
+    return outPath
+
 if __name__ == "__main__":
     image = "C:\Class Documents\DL\project\image_caption\Test_Images\cat.jpg"
     model_image_caption = "./weights/BEST_checkpoint_coco_5_cap_per_img_5_min_word_freq.pth.tar"
