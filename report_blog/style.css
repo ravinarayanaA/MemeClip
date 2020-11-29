@@ -1,0 +1,21 @@
+table.result {
+    border-collapse: collapse;
+    margin-left: 100px;
+}
+
+.result td,
+.result th {
+    border: 1px solid rgb(34, 18, 18);
+    padding: 6px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.result th {
+    padding-top: 12px;
+    background-color: rgb(165, 163, 163);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
