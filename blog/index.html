@@ -18,12 +18,50 @@
     <img src="./image/method.PNG" class="center" />
     <audio controls>
         <source src="./image/method_audio.mp3">
-        </audio>
+    </audio>
     <h3>Image Caption Generation</h3>
     <h3>Meme Template Selection</h3>
     <h3>Meme Generation</h3>
     <h3>Audio Mapper</h3>
-    <h2>Experiments & Results</h2>
+    <h2>Experiments</h2>
+    <h2>Results</h2>
+    <p>
+        As depicted in Fig 1, the model first generates a meaningful caption for the given input image. This caption is fed into the meme template selection module that selects the best match meme template for the input caption. The selected meme template and
+        the image caption then acts as an input for Meme Caption Generator that generates a funny meme caption. The funny meme caption is embedded in the meme template to create the final meme embedded with a humorous audio matching the meme caption.
+        The following table shows a few demonstrations of the output of the ClipMe architecture.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Input image</th>
+                <th>Caption</th>
+                <th>Meme template <br/> label</th>
+                <th>Meme Clip Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./image/input1.PNG" width="300px" /></td>
+                <td>a man riding a wave on <br/> top of a surfboard</td>
+                <td>Stoner Stanley</td>
+                <td><audio controls><source src="./image/output1.mp4"></audio></td>
+            </tr>
+            <tr>
+                <td><img src="./image/input2.PNG" width="100px" /></td>
+                <td>a black and white cat <br/> sitting on a window sill
+                </td>
+                <td>Awkward Seal</td>
+                <td><audio controls><source src="./image/output2.mp4"></audio></td>
+            </tr>
+            <tr>
+                <td><img src="./image/input3.PNG" width="200px" /></td>
+                <td>a close up of <br/> a bird in the water
+                </td>
+                <td>you don’t say meme</td>
+                <td><audio controls><source src="./image/output3.mp4"></audio></td>
+            </tr>
+        </tbody>
+    </table>
 
     <h2>Demo</h2>
 </body>
